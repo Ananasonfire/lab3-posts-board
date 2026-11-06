@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска публикаций</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>Доска публикаций</h1>
+            <p class="subtitle">Лабораторная работа № 3: асинхронный JavaScript и REST API</p>
+        </header>
+
+        <section class="panel">
+            <button id="load-posts-btn" type="button" class="btn">Загрузить публикации</button>
+            <div id="posts-list" class="posts-list" aria-live="polite"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Новая публикация</h2>
+            <form id="post-form" novalidate>
+                <div class="form-field">
+                    <label for="title-input">Заголовок</label>
+                    <input type="text" id="title-input" name="title" placeholder="Введите заголовок">
+                </div>
+                <div class="form-field">
+                    <label for="body-input">Текст</label>
+                    <textarea id="body-input" name="body" rows="4" placeholder="Введите текст публикации"></textarea>
+                </div>
+                <button type="submit" id="create-post-btn" class="btn btn-primary">Создать публикацию</button>
+            </form>
+        </section>
+
+        <div id="messages" class="messages" role="status" aria-live="polite"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
